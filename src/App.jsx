@@ -2,16 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header/Header'
+import Main from './components/Main/main'
+import Footer from './components/Footer/Footer'
 
 function App() {
-  //aqui va javascript
-  let x1 = "Smart Devices Development";
+  const [x1, setx1] = useState("START VALUE");
   return (
-    //aqui va el codigo html
     <>
-      <h1>Hello World from React</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nostrum, dolor iure temporibus reiciendis accusantium quia ea et. Voluptatum, earum ut velit commodi aliquid amet ex blanditiis est eligendi dolor?</p>
-      <p>{x1}</p>
+      <Header setx1={setx1}/>
+      <Main x1={x1}/>
+      <Footer setx1={setx1} x1={x1}/>
+      {/* <h3>Esto está en APP</h3> */}
     </>
   )
 }
